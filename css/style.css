@@ -170,7 +170,20 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 40px;
 }
+
+/* ── Logo swap ──────────────────────────────
+   All pages open with a dark hero behind the transparent header.
+   Default = white logo. On scroll the header turns white → blue logo. */
+.header-logo { display: flex; align-items: center; }
 .header-logo__img { height: 36px; width: auto; display: block; }
+.header-logo__img--white { display: block; }
+.header-logo__img--blue  { display: none; }
+#site-header.scrolled .header-logo__img--white { display: none; }
+#site-header.scrolled .header-logo__img--blue  { display: block; }
+
+/* ── Nav links ─────────────────────────────
+   Default = white (all pages have a dark hero behind transparent header).
+   Scrolled = navy (white header background). */
 .header-nav { margin-left: auto; }
 .header-nav ul { display: flex; gap: 40px; }
 .header-nav a {
@@ -179,40 +192,33 @@ h1, h2, h3, h4 {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--white);
   transition: color 0.3s;
 }
 .header-nav a:hover,
 .header-nav a.active { color: var(--gold); }
+#site-header.scrolled .header-nav a { color: var(--navy); }
+#site-header.scrolled .header-nav a:hover,
+#site-header.scrolled .header-nav a.active { color: var(--gold); }
 
-/* On hero pages header starts transparent with white text */
-.hero-page #site-header:not(.scrolled) .header-nav a { color: var(--white); }
-.hero-page #site-header:not(.scrolled) .header-cta {
+/* ── CTA button + burger ────────────────── */
+.header-cta {
+  margin-left: 24px;
+  padding: 10px 22px;
+  font-size: 0.72rem;
   color: var(--white);
   border-color: rgba(255,255,255,0.6);
 }
-/* ── Logo swap: white logo on dark/transparent header, blue logo on light header ── */
-.header-logo { display: flex; align-items: center; }
-
-/* Default: white logo visible (hero transparent header = dark background) */
-.header-logo__img--white { display: block; }
-.header-logo__img--blue  { display: none; }
-
-/* Scrolled (any page): header turns white → show blue logo */
-#site-header.scrolled .header-logo__img--white { display: none; }
-#site-header.scrolled .header-logo__img--blue  { display: block; }
-
-/* Non-hero pages: header is always white → always show blue logo */
-body:not(.hero-page) #site-header .header-logo__img--white { display: none; }
-body:not(.hero-page) #site-header .header-logo__img--blue  { display: block; }
-
-.header-cta { margin-left: 24px; padding: 10px 22px; font-size: 0.72rem; }
+#site-header.scrolled .header-cta {
+  color: var(--navy);
+  border-color: var(--navy);
+}
 .header-burger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
 .header-burger span {
   display: block; width: 24px; height: 2px;
-  background: var(--navy); transition: all 0.3s;
+  background: var(--white); transition: all 0.3s;
 }
-.hero-page #site-header:not(.scrolled) .header-burger span { background: var(--white); }
+#site-header.scrolled .header-burger span { background: var(--navy); }
 
 @media (max-width: 900px) {
   .header-nav { display: none; }
@@ -226,7 +232,7 @@ body:not(.hero-page) #site-header .header-logo__img--blue  { display: block; }
     z-index: 99;
   }
   .header-nav.open ul { flex-direction: column; align-items: center; gap: 32px; }
-  .header-nav.open a { font-size: 1.5rem; letter-spacing: 0.1em; }
+  .header-nav.open a { font-size: 1.5rem; letter-spacing: 0.1em; color: var(--navy); }
   .header-cta { display: none; }
   .header-burger { display: flex; margin-left: auto; z-index: 101; }
 }
