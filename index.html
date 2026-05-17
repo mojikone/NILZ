@@ -101,7 +101,14 @@
     initHeader();
     initFooter();
     initCTA('#cta-placeholder');
-    initRotatingText('#rotating-text-placeholder');
+    initRotatingText('#rotating-text-placeholder', {
+      ringText:   'INTERIOR DESIGN · ARCHITECTURE · LANDSCAPE · VISUALIZATION · ',
+      headline:   'One studio.',
+      headlineEm: 'Every discipline.',
+      sub:        'Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.',
+      ctaLabel:   'Explore Our Services',
+      ctaHref:    'services.html',
+    });
     await renderHomeProjects('#home-projects');
     await renderSiteContent('home');
     initMain();
