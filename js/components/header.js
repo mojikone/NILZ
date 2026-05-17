@@ -5,7 +5,8 @@
 // - Mobile hamburger toggle
 
 export function initHeader() {
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  // Normalise: strip .html so both '/about' and '/about.html' match 'about.html'
+  const currentSlug = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
 
   const pages = [
     { href: 'index.html',    label: 'Home' },
@@ -16,7 +17,8 @@ export function initHeader() {
   ];
 
   const navLinks = pages.map(p => {
-    const active = currentPage === p.href ? 'class="active"' : '';
+    const slug   = p.href.replace(/\.html$/, '');
+    const active = currentSlug === slug ? 'class="active"' : '';
     return `<li><a href="${p.href}" ${active}>${p.label}</a></li>`;
   }).join('');
 
