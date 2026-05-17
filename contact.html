@@ -95,8 +95,6 @@
     </div>
   </section>
 
-  <div id="cta-placeholder"></div>
-
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
@@ -108,13 +106,11 @@
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
-    import { initCTA    } from './js/components/cta.js';
     import { renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
 
     initHeader();
     initFooter();
-    initCTA('#cta-placeholder');
     await renderSiteContent('contact');
     initMain();
   </script>

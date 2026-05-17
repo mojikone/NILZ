@@ -59,8 +59,6 @@
   <!-- ── Rotating 360° ───────────────────── -->
   <div id="rotating-text-placeholder"></div>
 
-  <!-- ── CTA ─────────────────────────────── -->
-  <div id="cta-placeholder"></div>
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
@@ -73,21 +71,19 @@
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
-    import { initCTA    } from './js/components/cta.js';
     import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
 
     initHeader();
     initFooter();
-    initCTA('#cta-placeholder');
     initRotatingText('#rotating-text-placeholder', {
-      tag:            'Our Philosophy',
-      headline:       'Design is in',
-      headlineEm:     'the details.',
+      tag:            "Let's Build Your Dream",
+      headline:       'Elevate Your',
+      headlineEm:     'Project.',
       sub:            'Thirteen years of shaping spaces that work as beautifully as they look — because great design is both seen and felt.',
-      ctaLabel:       'See Our Work',
-      ctaHref:        'projects.html',
+      ctaLabel:       'Contact Us Today',
+      ctaHref:        'contact.html',
       decorativeImage:'assets/images/line-art-hero.png',
     });
 

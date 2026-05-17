@@ -79,8 +79,6 @@
   <!-- ── Rotating 360° ───────────────────── -->
   <div id="rotating-text-placeholder"></div>
 
-  <!-- ── CTA ─────────────────────────────── -->
-  <div id="cta-placeholder"></div>
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
@@ -93,21 +91,19 @@
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
-    import { initCTA    } from './js/components/cta.js';
     import { initRotatingText } from './js/components/rotating-text.js';
     import { renderHomeProjects, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
 
     initHeader();
     initFooter();
-    initCTA('#cta-placeholder');
     initRotatingText('#rotating-text-placeholder', {
-      tag:            'What We Do',
-      headline:       'One studio.',
-      headlineEm:     'Every discipline.',
+      tag:            "Let's Build Your Dream",
+      headline:       'Elevate Your',
+      headlineEm:     'Project.',
       sub:            'Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.',
-      ctaLabel:       'Explore Our Services',
-      ctaHref:        'services.html',
+      ctaLabel:       'Contact Us Today',
+      ctaHref:        'contact.html',
       decorativeImage:'assets/images/line-art-hero.png',
     });
     await renderHomeProjects('#home-projects');
