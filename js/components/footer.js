@@ -5,7 +5,7 @@ export function initFooter() {
 <footer id="site-footer">
   <div class="footer-inner container">
     <div class="footer-brand">
-      <img src="assets/images/logo.png" alt="NILZ" class="footer-logo">
+      <img src="assets/images/logo-white.png" alt="NILZ" class="footer-logo">
       <p class="footer-tagline">Design Spaces. Elevate Life.</p>
       <div class="footer-social">
         <a href="https://api.whatsapp.com/send?phone=96892315257" target="_blank" rel="noopener" aria-label="WhatsApp">

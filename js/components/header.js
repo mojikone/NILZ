@@ -24,7 +24,8 @@ export function initHeader() {
 <header id="site-header">
   <div class="header-inner container">
     <a href="index.html" class="header-logo">
-      <img src="assets/images/logo.png" alt="NILZ" class="header-logo__img">
+      <img src="assets/images/logo-white.png" alt="NILZ" class="header-logo__img header-logo__img--white">
+      <img src="assets/images/logo-blue.png"  alt="NILZ" class="header-logo__img header-logo__img--blue">
     </a>
     <nav class="header-nav" id="header-nav">
       <ul>${navLinks}</ul>
