@@ -301,57 +301,21 @@ h1, h2, h3, h4 {
 .cta-title { color: var(--white); margin-bottom: 20px; }
 .cta-body { color: rgba(255,255,255,0.7); font-size: 1.05rem; margin-bottom: 40px; }
 
-/* ─── Rotating Text ──────────────────────── */
-.rotating-section { overflow: hidden; }
-.rotating-wrapper {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  align-items: center;
-  gap: 80px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
+/* ─── Statement Section ───────────────────── */
+.statement-section { border-top: 1px solid rgba(27,43,75,0.1); }
+.statement-inner {
+  max-width: 760px;
+  text-align: center;
 }
-.rotating-ring {
-  position: relative;
-  width: 280px;
-  height: 280px;
-  flex-shrink: 0;
+.statement-headline { margin-bottom: 24px; }
+.statement-headline em { font-style: italic; color: var(--gold); }
+.statement-sub {
+  color: var(--gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
 }
-.rotating-svg {
-  width: 100%;
-  height: 100%;
-  animation: spin 24s linear infinite;
-}
-.rotating-text-svg {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  fill: var(--navy);
-}
-.rotating-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-.rotating-caption h2 { margin-bottom: 16px; }
-.rotating-caption h2 em { font-style: italic; color: var(--gold); }
-.rotating-caption p { color: var(--gray); max-width: 420px; }
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
-@media (max-width: 900px) {
-  .rotating-wrapper { grid-template-columns: 1fr; text-align: center; }
-  .rotating-ring { margin: 0 auto; }
-  .rotating-caption p { margin: 0 auto; }
-}
+.statement-cta { margin: 0 auto; }
 
 /* ─── Hero ───────────────────────────────── */
 .hero-section {
