@@ -170,7 +170,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 40px;
 }
-.header-logo__img { height: 32px; width: auto; }
+.header-logo__img { height: 36px; width: auto; display: block; }
 .header-nav { margin-left: auto; }
 .header-nav ul { display: flex; gap: 40px; }
 .header-nav a {
@@ -191,8 +191,14 @@ h1, h2, h3, h4 {
   color: var(--white);
   border-color: rgba(255,255,255,0.6);
 }
-.hero-page #site-header:not(.scrolled) .header-logo__img {
-  filter: brightness(0) invert(1);
+/* Logo has white background — wrap it in a subtle white pill so it stays
+   legible on both the dark transparent hero header AND the scrolled white header */
+.header-logo {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
 }
 
 .header-cta { margin-left: 24px; padding: 10px 22px; font-size: 0.72rem; }
@@ -233,7 +239,14 @@ h1, h2, h3, h4 {
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-logo { height: 30px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+.footer-logo {
+  height: 34px;
+  margin-bottom: 16px;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 4px 10px;
+  display: inline-block;
+}
 .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 24px; font-style: italic; }
 .footer-social { display: flex; gap: 16px; }
 .footer-social a { color: rgba(255,255,255,0.55); transition: color 0.3s; }
