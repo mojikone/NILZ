@@ -27,21 +27,21 @@
         "number": "01",
         "title": "Interior Design & Execution",
         "body": "From concept to completion — expert supervision, workshop management, and intelligent material selection for spaces that exceed expectations.",
-        "image": "assets/images/project-1.jpg",
-        "tools": ["3ds Max", "V-Ray", "Corona Renderer", "SketchUp"]
+        "image": "assets/images/service-01.jpg",
+        "tools": ["3ds Max", "V-Ray", "Corona Renderer", "Lumion", "Unreal Engine", "SketchUp"]
       },
       {
         "number": "02",
         "title": "Architectural Visualization",
         "body": "Photorealistic renders, architectural animations, and cinematic simulations that bring your project to life before a single brick is laid.",
-        "image": "assets/images/project-2.jpg",
+        "image": "assets/images/service-02.jpg",
         "tools": ["Unreal Engine", "Lumion", "3ds Max", "V-Ray"]
       },
       {
         "number": "03",
         "title": "Technical Design & BIM",
         "body": "Precision technical drawings and Building Information Modeling using Revit and AutoCAD to ensure accuracy at every stage of your project.",
-        "image": "assets/images/project-3.jpg",
+        "image": "assets/images/service-03.jpg",
         "tools": ["Revit", "AutoCAD", "SketchUp"]
       }
     ],
